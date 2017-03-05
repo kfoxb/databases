@@ -22,7 +22,7 @@ app.use(parser.json());
 app.use('/classes', router);
 
 // Serve the client files
-app.use(express.static(__dirname + '/../client'));
+app.use(express.static(__dirname + '/../client/client'));
 
 // If we are being run directly, run the server.
 if (!module.parent) {
@@ -30,3 +30,13 @@ if (!module.parent) {
   console.log('Listening on', app.get('port'));
 }
 
+// db.getAllMessages(function(results) { console.log(results); });
+// db.getAllMessages((results) => console.log(results) );
+// db.insertUsername(function() {}, ['tim', 'bill', 'mary']);
+db.getUsernameId((results) => {
+  console.log('THESE ARE THE getUsernameId RESULTS!!!!', results);
+}, ['fred']);
+
+// db.insertUsername((results) => {
+//   console.log('THESE ARE insertUsername RESULTS!!!!', results);
+// }, ['gary']);

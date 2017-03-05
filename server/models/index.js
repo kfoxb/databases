@@ -13,3 +13,6 @@ module.exports = {
   }
 };
 
+db.getAllMessages(function(results) {
+  // console.log(results);
+});
